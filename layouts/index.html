@@ -1,18 +1,9 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{ define "main" }}
 
-    <div class="container">
+<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+<span class="lead">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+<div class="post">
+  {{ .Content }}
+</div>
 
-        {{ range .Data.Pages }}
-        <div>
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <span class="lead">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-            <p>{{ .Summary }}</p>
-        </div>
-        {{ end }}
-
-        {{ partial "container-footer.html" . }}
-
-    </div>
-
-{{ partial "footer.html" . }}
+{{ end }}

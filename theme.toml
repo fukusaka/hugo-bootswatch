@@ -5,7 +5,7 @@ description = "Bootswatch Theme (Bootstrap 3) for Hugo"
 homepage = "https://github.com/nilproductions/hugo-bootswatch"
 tags = ["bootstrap", "bootswatch"]
 features = []
-min_version= 0.13
+min_version= 0.20
 
 [author]
   name = "Nicholas Whittier"

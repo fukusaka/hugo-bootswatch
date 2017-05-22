@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "first-head" }}
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="/css/hugo-bootswatch.css">
+    {{ partial "last-head" }}
+  </head>
+  <body>
+    {{ partial "first-body" }}
+
+    {{ partial "navbar.html" . }}
+
+    <div class="container">
+
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+    {{ partial "container-footer.html" . }}
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootswatch.js"></script>
+    {{ partial "last-body" }}
+  </body>
+</html>
